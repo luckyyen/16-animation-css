@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숲 FOREST</title>
+</head>
+<link rel="stylesheet" href="css/forest.css">
+
+
+
+<body>
+    <header>
+        <h1><img src="images/logo.png" alt=""></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">영웅의 발자취</a></li>
+                <li><a href="#">역사의 사건들</a></li>
+                <li><a href="#">벚꽃 속 약속</a></li>
+                <li><a href="#">다시 피어나다</a></li>
+                <li><a href="#">함께 걷는 길</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="visual">
+        <div class="flower1"></div>
+        <div class="flower2"></div>
+        <div class="flower3"></div>
+        <div class="butterfly">
+            <img src="images/butterfly.png" alt="">
+        </div>
+
+
+        <div class="playbtn">
+            <audio id="audio" src="music/forest.mp4" controls></audio>
+            <img id="playBtn" src="images/btn_play.png" alt="플레이">
+            <img id="pauseBtn" src="images/btn_pause.png" alt="일시중지">
+        </div>
+
+        <div class="text">
+            <ul>
+                <li><span class="space">난</span>
+                    <span>저</span>
+                    <span class="space">기</span>
+                    <span>숲</span>
+                    <span class="space">이</span>
+                    <span class="space">돼</span>
+                    <span>볼</span>
+                    <span>게</span>
+                </li>
+                <li>
+                    <span>너</span>
+                    <span class="space">는</span>
+                    <span>자</span>
+                    <span>그</span>
+                    <span>맣</span>
+                    <span>기</span>
+                    <span class="space">만</span>
+                    <span class="space">한</span>
+                    <span>언</span>
+                    <span class="space">덕</span>
+                    <span>위</span>
+                    <span>를</span>
+                </li>
+                <li>
+                    <span>오</span>
+                    <span>르</span>
+                    <span class="space">며</span>
+                    <span class="space">날</span>
+                    <span>바</span>
+                    <span>라</span>
+                    <span>볼</span>
+                    <span>래</span>
+                    <span>?</span>
+                </li>
+                <li>
+                    <span>나</span>
+                    <span class="space">의</span>
+                    <span>작</span>
+                    <span class="space">은</span>
+                    <span>마</span>
+                    <span class="space">음</span>
+                    <span>한</span>
+                    <span>구</span>
+                    <span>석</span>
+                    <span>이</span>
+                    <span>어</span>
+                    <span class="space">도</span>
+                    <span>돼</span></li>
+            </ul>
+        </div>
+    </div>  
+    
+    <script>
+  const audio = document.getElementById('audio')
+  const playBtn = document.getElementById('playBtn')
+  const pauseBtn = document.getElementById('pauseBtn')
+
+  // 플레이 버튼 클릭 시
+  playBtn.addEventListener('click', () => {
+    audio.play()
+    playBtn.style.display = 'none'
+    pauseBtn.style.display = 'inline'
+  })
+
+  // 일시중지 버튼 클릭 시
+  pauseBtn.addEventListener('click', () => {
+    audio.pause()
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+
+  // 오디오가 끝났을 때 플레이 버튼 보여주기
+  audio.addEventListener('ended', () => {
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+</script>
+</body>
+
+</html>
+
