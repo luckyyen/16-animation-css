@@ -88,7 +88,7 @@ header nav .gnb li a {color: #c9ff9c; padding: 25px; display: block;}
     100% {background-size: 100%; opacity: 1;}
 }
 
-#visual .butterfly {position: absolute; left: 36%; top: 150px; transform: translateX(-50%); animation: butterfly 1s infinite alternate; opacity: 1;}
+#visual .butterfly {position: absolute; left: 36%; top: 150px; transform: translateX(-50%); animation: butterfly 5s infinite alternate; opacity: 1;}
 @keyframes butterfly{
     0% {transform: scale(0.94) translateX(-50%); opacity: 0; transform-origin: center;}
     100% {transform: scale(1) translateX(-50%); opacity: 1; transform-origin: center;}
